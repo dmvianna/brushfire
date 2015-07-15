@@ -82,16 +82,16 @@ angular.module('brushfire_videosPage').controller('PageCtrl', [
         src: $scope.newVideoSrc,
       };
 
-    	// create placeholder anchor element
-    	var parser = document.createElement('a');
+        // create placeholder anchor element
+        var parser = document.createElement('a');
 
-    	// assign url to parser.href
-    	parser.href = _newVideo.src
+        // assign url to parser.href
+        parser.href = _newVideo.src
 
-    	// Use the indexOf parser.search as the first argument and length of
-    	// parser.search as the second argument of parser.search.substring
-    	// The result is the YouTube ID --> LfOWehvvuo0
-    	var youtubeID = parser.search.substring(parser.search.indexOf("=")+1, parser.search.length);
+        // Use the indexOf parser.search as the first argument and length of
+        // parser.search as the second argument of parser.search.substring
+        // The result is the YouTube ID --> LfOWehvvuo0
+        var youtubeID = parser.search.substring(parser.search.indexOf("=")+1, parser.search.length);
 
       _newVideo.src = 'https://www.youtube.com/embed/'+youtubeID;
 
